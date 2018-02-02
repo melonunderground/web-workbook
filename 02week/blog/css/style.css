@@ -51,16 +51,26 @@ h1{
 }
 
 .blogpost{
-  /* font-family: inherit; */
+  color: white !important;
   width: 70%;
   padding: 5px;
   text-align: left;
 
 }
 
+.content, .blogpost{
+  color: black;
+
+}
+
 h3 {
+  color: purple;
   font-family:serif;
   font-size:20px;
+}
+
+.incomplete h3{
+  color:inherit;
 }
 
 .headline {

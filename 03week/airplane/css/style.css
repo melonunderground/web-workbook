@@ -1,25 +1,20 @@
 body {
-  background: url("...img/airline.jpg") no-repeat center
+  background: url("./img/airline.jpg") no-repeat center;
   background-size: cover;
   font-family: 'Lato', sans-serif;
 }
 
-.top{
-  background: #193A55;
+ul {
+  list-style-type: none;
+  color: white;
+  padding-left: 400px;
+  padding-top: 25px;
   width: 100%;
-  position: absolute;
-  display: flex;
-
+  height: auto;
 }
 
-/* passenger count */
-div class passenger info
-div class quantity
-div label
-div select
-option value-12345
-
-
-/* Radio button dropdown */
-div class Radioform action
-input type='radio'checked= name= value=
+li {
+  display: inline;
+  padding-left: 5px;
+  padding-right: 5px;
+}

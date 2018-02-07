@@ -1,0 +1,10 @@
+.flexbox{
+  display: flex;
+  width: 100%;
+  color: lightgray;
+}
+
+.box{
+  height: 324px;
+  width: 270px;
+}

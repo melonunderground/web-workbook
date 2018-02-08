@@ -1,0 +1,53 @@
+body {
+  width: 850px;
+  margin: 0 auto;
+  /* margin aligns the boxes to the center */
+}
+
+.img-Container{
+    height: 450px;
+    background-image: url(../img/nasa-background.jpg);
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+p {
+  color:white;
+  font-size: 100px;
+  font-weight: bold;
+}
+
+h3 {
+  font-weight:bold;
+  font-size: 25px;
+}
+
+.flexbox {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  background-color: lightgray;
+  margin: 0 auto;
+  padding-top: 25px;
+}
+
+.box {
+  height: 324px;
+  width: 270px;
+}
+
+
+ul {
+  list-style: none;
+}
+
+#socialmedia {
+  margin-right: 20px;
+}
+
+#contactus {
+  margin-left: 20px;
+}

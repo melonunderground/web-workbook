@@ -1,0 +1,85 @@
+#nav{
+  width: 100%;
+  background-color: green;
+  text-align: center;
+  font-size: 30px;
+  font-family: 'Rammetto One', cursive;
+}
+
+#nav li{
+  display: inline-block;
+  list-style-type: none;
+  border: none;
+  text-transform: uppercase;
+  padding: 10px 5px;
+
+}
+#nav a{
+  text-decoration: none;
+}
+
+#container{
+  background-color: gray;
+  text-align: left;
+  margin: 10px auto auto auto;
+  padding: 20px;
+  width: 70%;
+
+}
+
+h1{
+  font-family: 'Lobster';
+  color: hotpink;
+  font-size: 40px;
+}
+
+
+.avatar {
+  width: 100%;
+  border-radius: 10%;
+  height: auto;
+  padding: 10px 5px;
+}
+
+#sidebar{
+  margin-left: 10px;
+  width: 25%;
+}
+
+.content{
+  font-family:sans-serif;
+  width: 80px;
+}
+
+.blogpost{
+  color: white !important;
+  width: 70%;
+  padding: 5px;
+  text-align: left;
+
+}
+
+.content, .blogpost{
+  color: black;
+
+}
+
+h3 {
+  color: purple;
+  font-family:serif;
+  font-size:20px;
+}
+
+.incomplete h3{
+  color:inherit;
+}
+
+.headline {
+  font-family: cursive;
+  font-size: 35px;
+}
+
+p:hover:first-letter {
+    font-size: 200%;
+    color: yellow;
+}

@@ -17,14 +17,18 @@ body{
   font-size: 2em;
 }
 
+.title h1{
+  font-weight: 100
+}
+
 .title::last-word{
   font-weight: bold;
 
 }
 
 span{
-
-font-weight:
+  font-weight: bold;
+  /* color: orange; */
 }
 
 .mainContainer{
@@ -33,6 +37,7 @@ font-weight:
   color: white;
   display: flex;
   justify-content: space-around;
+  align-items: center;
 }
 
 .column{
@@ -62,8 +67,21 @@ font-size; 2em;
   border-top: solid 30px #2bcdc0;
 }
 
-@media (max-width: 768px){
+@media (max-width: 576px){
   .titleContainer{
     background: #33a8dd;
+  }
+}
+
+@media (max-width: 576px){
+  .mainContainer{
+    background: #ffffff;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 400px;
+
   }
 }

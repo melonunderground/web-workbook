@@ -2,13 +2,9 @@
 
 <html>
 
-<head>
-<title>dom-practice</title>
-</head>
-
 <body>
 
-<h1>Shopping Cart</h1>
+<h1 id="h">Shopping Cart</h1>
 
  <ul id="shopping-list">
    <li>All-New Fire 7 Tablet</li>
@@ -16,6 +12,10 @@
    <li>Amazon Echo</li>
    <li>Coleman Lay Z Spa Inflatable Hot Tub</li>
  </ul>
+
+  <input type="text" size="20px">
+  <input type="button" id="btnAdd" value="add item" onclick="addListItem()">
+  <input type="button" id="btnRemove" value="remove last item" onclick="removeListItem()">
 
  <div id="div">
 
@@ -28,6 +28,7 @@
    <p class="paragraph" id="P4">Coleman Lay Z Spa Inflatable Hot Tub: Pamper yourself in relaxing heated water surrounded by soothing bubble jets. Easy to operate digital control panel; automatic start/stop timer-controlled heating system. 4-6 Person Capacity. Inflated walls are made of TriTech material that provides ultimate durability and comfort. Fast, easy set up - inflates using the spa's pump - NO tools needed. </p>
 
 </div>
+
 </body>
 </html>
 <script type="text/javascript" src="./js/script.js"></script>

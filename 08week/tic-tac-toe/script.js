@@ -1,156 +1,107 @@
-// 'use strict';
+'use strict';
 // // We need a board
 // // We need the ability to place an "X" or an "O" on the board
 // // We need to check for win
-//
+// 3 columns, 3 rows
+// if/else statements to  confirm winner
+// 8 possible winning solutions
+// 8 if/else statements
+// ex-- if 0 ==='X' && 3 ==='X' && 6 === 'X'
+
+
 $(document).ready(function() {
-//
+  var turn = "X";
+  $('[data-cell]').on('click', function() {
+    if ($(this).text() === '') {
+      $(this).text(turn);
+      wins();
+      if (turn === "O") {
+        turn = "X";
+      } else {
+        turn = "O";
+      }
+    }
+  })
 
-    var playerTurn = 'X';
-    var numberOfTurns = 0;
-    var isWinner = false;
+  function wins() {
+    if ($('[data-cell = "0"]').text() === turn &&
+      $('[data-cell = "3"]').text() === turn &&
+      $('[data-cell = "6"]').text() === turn) {
+      $("#announce-winner").html(`${turn} wins`);
+    }
+    if ($('[data-cell = "0"]').text() === turn &&
+      $('[data-cell = "1"]').text() === turn &&
+      $('[data-cell = "2"]').text() === turn) {
+      $("#announce-winner").html(`${turn} wins`);
+    }
+    if ($('[data-cell = "1"]').text() === turn &&
+      $('[data-cell = "4"]').text() === turn &&
+      $('[data-cell = "7"]').text() === turn) {
+      $("#announce-winner").html(`${turn} wins`);
+    }
+    if ($('[data-cell = "2"]').text() === turn &&
+      $('[data-cell = "5"]').text() === turn &&
+      $('[data-cell = "8"]').text() === turn) {
+      $("#announce-winner").html(`${turn} wins`);
+    }
+    if ($('[data-cell = "3"]').text() === turn &&
+      $('[data-cell = "4"]').text() === turn &&
+      $('[data-cell = "5"]').text() === turn) {
+      $("#announce-winner").html(`${turn} wins`);
+    }
+    if ($('[data-cell = "6"]').text() === turn &&
+      $('[data-cell = "7"]').text() === turn &&
+      $('[data-cell = "8"]').text() === turn) {
+      $("#announce-winner").html(`${turn} wins`);
+    }
+    if ($('[data-cell = "0"]').text() === turn &&
+      $('[data-cell = "4"]').text() === turn &&
+      $('[data-cell = "8"]').text() === turn) {
+      $("#announce-winner").html(`${turn} wins`);
+    }
+    if ($('[data-cell = "2"]').text() === turn &&
+      $('[data-cell = "4"]').text() === turn &&
+      $('[data-cell = "6"]').text() === turn) {
+      $("#announce-winner").html(`${turn} wins`);
+    }
+  }
+})
 
-    // set the board
-    var board = [
-        [' ', ' ', ' '],
-        [' ', ' ', ' '],
-        [' ', ' ', ' ']
-    ];
+function clear() {
 
-    var row = null;
-    var column = null;
+  $('#clear').on('click', function() {
 
-    $("[data-cell]").click(function() {
+    if ($('[data-cell = "0"]').text() === 'X' || 'O') {
+      ($('[data-cell = "0"]').text() === '')
+    }
+    if ($('[data-cell = "1"]').text() === 'X' || 'O') {
+      ($(this).text() === '');
+    }
+    if ($('[data-cell = "2"]').text() === 'X' || 'O') {
+      ($(this).text() === '');
+    }
+    if ($('[data-cell = "3"]').text() === 'X' || 'O') {
+      ($(this).text() === '');
+    }
+    if ($('[data-cell = "4"]').text() === 'X' || 'O') {
+      ($(this).text() === '');
+    }
+    if ($('[data-cell = "5"]').text() === 'X' || 'O') {
+      ($(this).text() === '');
+    }
+    if ($('[data-cell = "6"]').text() === 'X' || 'O') {
+      ($(this).text() === '');
+    }
+    if ($('[data-cell = "7"]').text() === 'X' || 'O') {
+      ($(this).text() === '');
+    }
+    if ($('[data-cell = "8"]').text() === 'X' || 'O') {
+      ($(this).text() === '');
+    }
 
-        if (isWinner === false) {
-
-            // first checking to make sure the cell is blank.  If there is already a value, we cannot use that cell.
-            if ($(this).text() === '') {
-
-                $('#error').text('');
-
-                $(this).text(playerTurn);
-
-                // we could loop through and store values in an array with rows and columns
-                var cellNumber = $(this).data('cell');
-
-                // Based on the data cell number, assign a row and column.  And yes this is ugly but running multiple loops seemed just as silly.
-
-                if (cellNumber === 0) {
-                    row = 0;
-                    column = 0;
-                }
-                if (cellNumber === 1) {
-                    row = 0;
-                    column = 1;
-                }
-                if (cellNumber === 2) {
-                    row = 0;
-                    column = 2;
-                }
-                if (cellNumber === 3) {
-                    row = 1;
-                    column = 0;
-                }
-                if (cellNumber === 4) {
-                    row = 1;
-                    column = 1;
-                }
-                if (cellNumber === 5) {
-                    row = 1;
-                    column = 2;
-                }
-                if (cellNumber === 6) {
-                    row = 2;
-                    column = 0;
-                }
-                if (cellNumber === 7) {
-                    row = 2;
-                    column = 1;
-                }
-                if (cellNumber === 8) {
-                    row = 2;
-                    column = 2;
-                }
-
-                //need to print the X or Y to the board depending on coordinates
-                board[row][column] = if (playerTurn === 'X') {
-                  'X'} else {
-                  'O';
-                  }
-
-}               playerTurn = (playerTurn === 'X') ? 'O' : 'X';
-}
-});
-
-});
-
-//   var cellNumbers = [];
-//
-// // for loop through all cells populating them with blank string
-// function clearBoard() {
-//     for (var i = 0; i <= 8; i+= 1) {
-// $('div[data-cell=' + i + ']').text(), '');
-//     }
-//   });
-//
-
-
-
-
-
-
-
-
-//   //   // Put app logic in here
-//   $('[data-cell]').on('click', function(){
-//
-//     if(!$(this).text()){
-//        $(this).text('x');
-//     }else{
-//       var num = $(this).text();
-//       num++;
-//       $(this).text(num);
-//     }
-//     hit25();
-//   })
-//
-//   function hit25(){
-//     var counter = 0;
-//     $('[data-cell]').each(function(){
-//       counter += Number($(this).text());
-//       console.log(Number(counter));
-//     })
-//     if(counter === ){
-//       $('#announce-winner').text('25!!!');
-//     }
-//   }
-//
-// })
-// $(document).ready(function() {
-//   // Put app logic in here
-//
-//   $('[data-cell]').on('click', function(){
-//
-//     if(!$(this).text()){
-//        $(this).text('1');
-//     }else{
-//       var num = $(this).text();
-//       num++;
-//       $(this).text(num);
-//     }
-//
-//   });
-  // var player1 = 'x';
-  // var player2 = 'o';
-  //
-  // $('[data-cell]').on('click',function() {
-  //
-  // for (var i = 0; i <= 8; i += 1) {
-  //   if (i%2 == 0) {
-  //     $(this).text('player1');
-  //   }
-  //   else {
-  //     $(this).text('player2');
-  //   }
-  // }
+  })
+ function clear() {
+   ('[data-cell]').empty()
+   ('announce-winner').empty()
+   turn = 'X'
+ }

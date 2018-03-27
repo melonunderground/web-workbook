@@ -20,6 +20,7 @@ $(document).ready(function() {
       } else {
         turn = "O";
       }
+
     }
   })
 
@@ -65,43 +66,11 @@ $(document).ready(function() {
       $("#announce-winner").html(`${turn} wins`);
     }
   }
+
+$('#clear').on('click', function() {
+  $('[data-cell]').empty()
+  $('#announce-winner').empty()
+    turn = 'X'
+});
+
 })
-
-function clear() {
-
-  $('#clear').on('click', function() {
-
-    if ($('[data-cell = "0"]').text() === 'X' || 'O') {
-      ($('[data-cell = "0"]').text() === '')
-    }
-    if ($('[data-cell = "1"]').text() === 'X' || 'O') {
-      ($(this).text() === '');
-    }
-    if ($('[data-cell = "2"]').text() === 'X' || 'O') {
-      ($(this).text() === '');
-    }
-    if ($('[data-cell = "3"]').text() === 'X' || 'O') {
-      ($(this).text() === '');
-    }
-    if ($('[data-cell = "4"]').text() === 'X' || 'O') {
-      ($(this).text() === '');
-    }
-    if ($('[data-cell = "5"]').text() === 'X' || 'O') {
-      ($(this).text() === '');
-    }
-    if ($('[data-cell = "6"]').text() === 'X' || 'O') {
-      ($(this).text() === '');
-    }
-    if ($('[data-cell = "7"]').text() === 'X' || 'O') {
-      ($(this).text() === '');
-    }
-    if ($('[data-cell = "8"]').text() === 'X' || 'O') {
-      ($(this).text() === '');
-    }
-
-  })
- function clear() {
-   ('[data-cell]').empty()
-   ('announce-winner').empty()
-   turn = 'X'
- }

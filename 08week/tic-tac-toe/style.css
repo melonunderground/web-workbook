@@ -8,6 +8,15 @@ div[data-cell] {
   text-align: center;
 }
 
+/* div[data-cell="0"] {
+  color: blue;
+} */
+
+.mark {
+  height: 33px;
+  width: 33px;
+}
+
 .row {
   clear: both;
 }
